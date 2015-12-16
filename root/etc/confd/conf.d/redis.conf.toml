@@ -1,0 +1,7 @@
+[template]
+src = "redis.conf.tmpl"
+dest = "/etc/redis.conf"
+uid = 0
+gid = 0
+mode = "0644"
+keys = []
