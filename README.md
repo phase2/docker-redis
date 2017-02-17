@@ -20,7 +20,6 @@ configurations offered by this image.
 
 * `REDIS_BIND`: [`127.0.0.1 10.0.0.1`] Space-separated list of IPs to bind to.
   If this variable is not specified it will bind on all interfaces.
-* `PHP_XDEBUG`: ["true"|"false"] Specify whether the PHP Xdebug extension should be enabled.
 
 ## Security Reports
 
