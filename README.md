@@ -1,24 +1,31 @@
-![logo](https://www.phase2technology.com/wp-content/uploads/2015/06/logo-retina.png)
+# Outrigger Redis
 
-# Redis
+> Redis container with a confd template for redis.conf
 
-Redis container with a confd template for redis.conf
+[![](https://images.microbadger.com/badges/version/outrigger/redis.svg)](https://microbadger.com/images/outrigger/redis "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/outrigger/redis.svg)](https://microbadger.com/images/outrigger/redis "Get your own image badge on microbadger.com")
 
-## Configuration
+Unlike the official [Redis image](https://hub.docker.com/_/redis), this CentOS-based
+image has a confd template for Redis configuration.
 
-### Environment Variables
+For more documentation on how Outrigger images are constructed and how to work
+with them, please [see the documentation](http://docs.outrigger.sh/en/latest/).
 
-#### REDIS_BIND
+## Environment Variables
 
-This is a space separated list of IPs to bind to.  If this variable is not specified it will bind on all interfaces. 
+Outrigger images use Environment Variables and [confd](https://github.com/kelseyhightower/confd)
+to "templatize" a number of Docker environment configurations. These templates are
+processed on startup with environment variables passed in via the docker run
+command-line or via your docker-compose manifest file. Here are the "tunable"
+configurations offered by this image.
 
-In a Dockerfile
-```
-ENV REDIS_BIND 127.0.0.1 10.0.0.1
-```
+* `REDIS_BIND`: [`127.0.0.1 10.0.0.1`] Space-separated list of IPs to bind to.
+  If this variable is not specified it will bind on all interfaces.
+* `PHP_XDEBUG`: ["true"|"false"] Specify whether the PHP Xdebug extension should be enabled.
 
-Via Docker Compose file
-```
-environment:
-  REDIS_BIND: 127.0.0.1 10.0.0.1
-```
+## Security Reports
+
+Please email outrigger@phase2technology.com with security concerns.
+
+## Maintainers
+
+[![Phase2 Logo](https://www.phase2technology.com/wp-content/uploads/2015/06/logo-retina.png)](https://www.phase2technology.com)

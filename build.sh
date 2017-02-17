@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t phase2/redis .
+docker build -t outrigger/redis .
