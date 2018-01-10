@@ -21,6 +21,9 @@ configurations offered by this image.
 * `REDIS_BIND`: [`127.0.0.1 10.0.0.1`] Space-separated list of IPs to bind to.
   If this variable is not specified it will bind on all interfaces.
 
+* `REDIS_PROTECTED`: `no`  By default redis starts up in protected mode (yes) and this
+  allows you to turn protected mode off by default. Possible values are 'yes' or 'no'
+
 ## Security Reports
 
 Please email outrigger@phase2technology.com with security concerns.
